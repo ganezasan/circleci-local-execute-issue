@@ -1,0 +1,17 @@
+
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run: ls -la 
+      - run: cat ハロー.text
+
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - build
